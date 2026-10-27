@@ -10,9 +10,9 @@
 
 Hatchable project: `proj_Zz3X2AzLtGi2`, version 3. Console: https://hatchable.com/console/projects/ai-storyboard-studio.
 
-The pilot currently supports email OTP auth, owner-scoped project CRUD, AI shot-list generation through the platform AI gateway, and JSON export. A smoke test confirmed anonymous API rejection, user list access, input validation, and create/read/delete cleanup. No paid image-render request was issued.
+The pilot supports email OTP auth, owner-scoped project CRUD, an AI shot-list endpoint through the platform AI gateway, and JSON export. AI generation is currently blocked until the owner configures a supported provider in Hatchable's AI setup. A smoke test confirmed anonymous API rejection (401), signed-in project listing (200), empty-brief validation (400), invalid ID validation (400), and create/read/delete cleanup. A valid synthetic generation request returned 503 because no AI provider key is configured. No image-render request was issued.
 
-The project is still marked **personal/private**. The owner must change visibility in Hatchable Console → Settings if the signup page is intended to be reachable by the public. Do not treat the temporary preview URL as a public launch.
+Deployment v4 reported public visibility and no deploy warnings. Verify signed-out browser access to the login page and all intended routes before announcing a public launch; project tier is still personal and should not be confused with a commercial multi-tenant plan.
 
 ## Neon production target
 
