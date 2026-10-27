@@ -5,3 +5,8 @@ providers = ["email"]
 [ai]
 required = true
 description = "Digunakan untuk menyusun storyboard dari brief. Penggunaan AI dapat menimbulkan biaya sesuai provider yang dipilih."
+
+[db.tables.storyboard_projects]
+read = "own"
+write = "own"
+owner_column = "owner_id"
