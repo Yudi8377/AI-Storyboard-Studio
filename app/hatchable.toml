@@ -1,0 +1,7 @@
+[auth]
+enabled = true
+providers = ["email"]
+
+[ai]
+required = true
+description = "Digunakan untuk menyusun storyboard dari brief. Penggunaan AI dapat menimbulkan biaya sesuai provider yang dipilih."
