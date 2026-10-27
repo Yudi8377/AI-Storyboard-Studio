@@ -12,11 +12,11 @@ Studio storyboard berbantuan AI, berbahasa Indonesia terlebih dahulu, untuk meng
 ## Status implementasi
 
 - Workspace responsif untuk brief, pengaturan format/gaya/bahasa/jumlah shot, pemilihan hingga empat frame kunci, penyimpanan proyek, dan ekspor JSON.
-- Generator teks AI terhubung melalui endpoint server-side pada pilot Hatchable; penggunaan dicatat oleh ledger AI platform. Ketersediaan generasi bergantung pada konfigurasi provider/kredit.
-- Autentikasi email satu kali, dan query proyek di pilot dibatasi oleh `owner_id`.
+- Endpoint generator teks AI tersedia melalui gateway server-side Hatchable dan dicatat di ledger platform. Pengujian mengonfirmasi endpoint menolak brief kosong; permintaan valid saat ini mengembalikan 503 karena provider AI belum dikonfigurasi.
+- Autentikasi email satu kali, dan query proyek di pilot dibatasi oleh `owner_id`; row-access rule `own` juga dideklarasikan untuk tabel proyek.
 - Pengujian smoke pilot: akses anonim ke API terlindungi ditolak (401); akses pengguna sah ke daftar proyek berhasil (200); validasi brief kosong ditolak (400); siklus simpan/baca/hapus fixture QA berhasil.
 - Render gambar belum diintegrasikan. Setiap layanan render berbayar harus melalui persetujuan eksplisit per pekerjaan dan menampilkan estimasi biaya terlebih dahulu.
-- **Belum siap disebut produksi komersial:** visibility Hatchable masih private; database Neon belum terhubung ke runtime aplikasi; belum ada E2E browser test, CI quality gate penuh, backup/restore drill, monitoring operasional, atau pengujian keamanan independen.
+- **Belum siap disebut produksi komersial:** aplikasi pilot sudah diterbitkan versi 4 dan visibilitas publik dilaporkan aktif, tetapi provider AI belum dikonfigurasi; database Neon belum terhubung ke runtime aplikasi; belum ada E2E browser test, hasil CI terkonfirmasi, backup/restore drill, monitoring operasional, atau pengujian keamanan independen.
 
 ## Struktur
 
