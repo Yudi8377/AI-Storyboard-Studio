@@ -4,7 +4,8 @@ providers = ["email"]
 
 [ai]
 required = true
-description = "Digunakan untuk menyusun storyboard dari brief. Penggunaan AI dapat menimbulkan biaya sesuai provider yang dipilih."
+pin = "google"
+description = "Google AI key untuk storyboard dan image generation. Generasi gambar memakai kredit/biaya provider."
 
 [db.tables.storyboard_projects]
 read = "own"
