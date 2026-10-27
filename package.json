@@ -1,0 +1,8 @@
+{
+  "name": "ai-storyboard-studio",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "check": "node --check app/api/projects.js && node --check 'app/api/projects/[id].js' && node --check app/api/generate.js && node --check app/public/app.js"
+  }
+}
