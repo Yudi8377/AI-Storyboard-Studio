@@ -55,7 +55,7 @@ export default async function (req, res) {
         timeoutMs: 170_000,
       });
       if (!result.ok) {
-        console.error('image-gen-provider-failed', { status: result.status, code: result.error?.code || 'provider_error' });
+        console.error('image-gen-provider-failed', JSON.stringify({ status: result.status, code: result.error?.code || null, message: result.error?.message || null, details: result.error?.details || null }));
         if (result.status === 412) return res.status(503).json({ error: 'Provider Google AI belum dikonfigurasi atau kredit AI tidak tersedia. Pemilik proyek perlu menyelesaikan pengaturan AI di Hatchable.' });
         if (result.status === 429) return res.status(429).json({ error: 'Provider AI membatasi permintaan atau kuota sedang tidak tersedia. Tunggu sebentar, lalu periksa status provider dan batas penggunaan sebelum mencoba lagi.' });
         return res.status(502).json({ error: 'Provider gambar gagal memproses permintaan. Coba lagi nanti.' });
